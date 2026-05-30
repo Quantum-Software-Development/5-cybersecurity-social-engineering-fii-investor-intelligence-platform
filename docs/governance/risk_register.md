@@ -1,9 +1,9 @@
 # Risk Register
 
-**Investor Intelligence Platform - FIIs Brasil 🇧🇷**  
-*Risk assessment for academic project and production deployment*
+### **Investor Intelligence Platform - FIIs Brasil 🇧🇷**  
+ ####*Risk assessment for academic project and production deployment*
 
----
+<br><br>
 
 ## Risk Matrix
 
@@ -22,7 +22,7 @@
 | R11 | Financial misinterpretation by users | Ethical | Medium | High | 🔴 High | Mandatory disclaimer; educational framing |
 | R12 | PII exposure in scraped data | Privacy | Low | Critical | 🔴 High | Public data only; author names stripped on request |
 
----
+<br><br>
 
 ## Severity Definitions
 
@@ -32,7 +32,7 @@
 | 🟡 **Medium** | Managed with documented controls |
 | 🟢 **Low** | Acceptable residual risk |
 
----
+<br><br>
 
 ## R08 — Secret Exposure: Detailed Mitigation
 
@@ -56,7 +56,8 @@ def get_api_key() -> str:
 - `secrets.toml.example` committed (template only)
 - Pre-commit hook recommended (future)
 
----
+
+<br><br>
 
 ## R11 — Financial Misinterpretation: Ethical Safeguards
 
@@ -68,16 +69,5 @@ All user-facing components include:
 4. **README disclaimer** (repository entry point)
 5. **NB05 Governance section** (academic documentation)
 
----
 
-## Open Risks (Accepted)
 
-| Risk | Rationale for Acceptance |
-|------|--------------------------|
-| TextBlob PT-BR limitations | No labeled FII dataset available; 4-layer mitigation sufficient for academic scope |
-| BM25 lexical limitations | Hybrid retrieval is V2 roadmap item |
-| Temporal dataset staleness | Re-run NB01 to refresh; frozen dataset is labeled with collection date |
-
----
-
-*Last updated: 2026-05-26 | Review cycle: Per academic semester*
