@@ -207,7 +207,7 @@ Distributed Data Processing (PySpark)
 
 #### Storage Layer
 
-- MinIO Local Data Lake Setup
+- [MinIO Local Data Lake Setup](https://github.com/Quantum-Software-Development/5-cybersecurity-social-engineering-fii-marketing-intelligence-platform/blob/6bea047d53196fb8dd5f106dd91d32609590fd4b/BigData_Stack_install_Ubuntu_Mac_Windows.md/minio-local-data-lake-setup-guide.md)
   - Implements a local S3-compatible Data Lake using MinIO object storage for centralized storage of analytical datasets and data engineering workloads.
 
 #### Processing Layer
