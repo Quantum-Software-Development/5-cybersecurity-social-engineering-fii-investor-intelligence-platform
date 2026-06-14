@@ -318,9 +318,13 @@ When RSS is unavailable or unstable, controlled HTML extraction of public pages.
 
 <br>
 
+
 ### [***Collection of Social Sources***]()
 
-Reddit: separate logical path as it represents conversational and community data. Treated as behavioral and discursive input, complementing editorial coverage with public sentiment and emerging narratives.
+<br>
+
+Reddit follows a separate logical path because it represents conversational and community-based data.
+It is treated as a behavioral and discursive input layer that complements editorial coverage with public sentiment and emerging narratives.
 
 <br>
 
@@ -333,6 +337,7 @@ Reddit: separate logical path as it represents conversational and community data
 | [1]() | PRAW (Python Reddit API Wrapper) | `REDDIT_CLIENT_ID` + `REDDIT_CLIENT_SECRET` |
 | [2]() | Public API `/new.json` + `/hot.json` | None |
 | [3]() | Committed frozen Parquet | None |
+
 
 <br><br>
 
