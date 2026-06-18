@@ -283,7 +283,7 @@ Analysts, managers and financial communication teams face:
 
 <br>
 
-> [!NOTE]
+> [!TIP]
 > This platform addresses this gap with 21 monitored sources, a Bronze/Silver/Gold pipeline and reproducible, interpretable analytics.
 
 <br><br>
@@ -374,7 +374,7 @@ It is treated as a behavioral and discursive input layer that complements editor
 <br>
 
 
-> [!NOTE]
+> [!TIP]
 > The original behavioral source uses Reddit (subreddits `r/investimentos` and `r/farialimabets`) as a [**social intelligence and market narrative layer**]().  
 > Following changes to Reddit’s public API policy in April 2023 (HTTP 403 restrictions), the pipeline was redesigned to operate across three levels:
 
