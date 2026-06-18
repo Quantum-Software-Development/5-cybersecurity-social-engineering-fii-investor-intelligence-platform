@@ -375,7 +375,7 @@ It is treated as a behavioral and discursive input layer that complements editor
 
 
 > [!TIP]
-> The original behavioral source uses Reddit (subreddits `r/investimentos` and `r/farialimabets`) as a [**social intelligence and market narrative layer**]().  
+> The original behavioral source uses Reddit subreddits (`r/investimentos` and `r/farialimabets`) as a [**social intelligence and market narrative layer**]().  
 > Following changes to Reddit’s public API policy in April 2023 (HTTP 403 restrictions), the pipeline was redesigned to operate across three levels:
 
 <br>
@@ -408,82 +408,72 @@ In the documented reference execution, the [Google News RSS fallback]() generate
 <br><br>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-
-
-# [Architecture & Data Pipeline]() 
-
-<br><br>
-
-## 1. [High-Level System Overview ]()
-
-The system is designed as a **multi-layered data intelligence pipeline**, transforming unstructured financial content into actionable insights and AI-powered responses.
+## [🏗️ High-Level Architecture]()
 
 <br>
 
 ```mermaid
 flowchart LR
 
-    classDef source fill:#0f172a,stroke:#22d3ee,color:#ffffff,stroke-width:2px;
-    classDef bronze fill:#1e293b,stroke:#22d3ee,color:#ffffff,stroke-width:2px;
-    classDef silver fill:#334155,stroke:#22d3ee,color:#ffffff,stroke-width:2px;
-    classDef gold fill:#475569,stroke:#22d3ee,color:#ffffff,stroke-width:2px;
-    classDef serving fill:#0f172a,stroke:#06b6d4,color:#ffffff,stroke-width:3px;
+    %%────────────────────
+    %% Styles
+    %%────────────────────
+    classDef source fill:#0f172a,stroke:#22d3ee,color:#ffffff,stroke-width:3px;
+    classDef bronze fill:#2b1d0e,stroke:#cd7f32,color:#ffffff,stroke-width:3px;
+    classDef silver fill:#1e293b,stroke:#c0c0c0,color:#ffffff,stroke-width:3px;
+    classDef gold fill:#2b2505,stroke:#ffd700,color:#ffffff,stroke-width:3px;
+    classDef serving fill:#0f172a,stroke:#22d3ee,color:#ffffff,stroke-width:3px;
 
-    A["📡 21 Monitored Sources<br/>6 Primary RSS + 4 Backup RSS<br/>10 Web Portals + Reddit"]
+    %%────────────────────
+    %% Sources
+    %%────────────────────
+    A["📡 21 Monitored Sources<br/>RSS • Scraping • Reddit"]:::source
 
-    subgraph Bronze["🥉 Bronze Layer — Raw Ingestion"]
-        B["Raw External Data<br/>Standardized 17-Field Schema<br/>SHA-256 article_id<br/>Stored as Parquet (Snappy)"]
+    %%────────────────────
+    %% Bronze
+    %%────────────────────
+    subgraph Bronze["🥉 Bronze Layer"]
+        B["NB01<br/>Raw Acquisition<br/>Parquet • data/external"]:::bronze
     end
 
-    subgraph Silver["🥈 Silver Layer — Processing & NLP"]
-        C["Data Cleaning & Validation<br/>Quality Gates"]
-        D["NB03 — MapReduce Processing"]
-        E["NB04 — TF-IDF & BM25 Indexing"]
-        F["NB05 — Sentiment Analysis"]
+    %%────────────────────
+    %% Silver
+    %%────────────────────
+    subgraph Silver["🥈 Silver Layer"]
+        C["NB02<br/>Cleaning & Validation"]:::silver
+
+        D["NB03<br/>MapReduce<br/>Word Count"]:::silver
+
+        E["NB04<br/>Hybrid Retrieval<br/>TF-IDF • BM25 • FAISS"]:::silver
+
+        F["NB05<br/>Contextual Sentiment"]:::silver
     end
 
-    subgraph Gold["🥇 Gold Layer — Intelligence"]
-        G["Market Intelligence Signals<br/>Top Ranked Articles<br/>Marketing Funnel Features"]
+    %%────────────────────
+    %% Gold
+    %%────────────────────
+    subgraph Gold["🥇 Gold Layer — Market Intelligence"]
+        G["NB06<br/>Marketing Intelligence<br/>3-Layer Relevance"]:::gold
+
+        H["NB07<br/>Dashboard Dataset<br/>Semantic + Hybrid Scores"]:::gold
     end
 
-    subgraph Dashboard["📊 Analytics Layer"]
-        H["Curated Data Views<br/>KPIs & Insights"]
-    end
-
+    %%────────────────────
+    %% Serving
+    %%────────────────────
     subgraph Serving["🚀 Serving Layer"]
-        I["FastAPI (API Layer)"]
-        J["Streamlit (Dashboard UI)"]
-        K["LLM Interface<br/>Groq + Llama 3.1"]
+        I["FastAPI<br/>REST API"]:::serving
+
+        J["Streamlit<br/>Dashboard UI"]:::serving
+
+        K["Groq + Llama 3.1<br/>Hybrid RAG Chatbot"]:::serving
     end
 
+    %% Flow
     A --> B
+
     B --> C
+
     C --> D
     C --> E
     C --> F
@@ -500,14 +490,44 @@ flowchart LR
     I --> K
     J --> K
 
-    class A source
-    class B bronze
-    class C,D,E,F silver
-    class G gold
-    class H,I,J,K serving
-
     linkStyle default stroke:#22d3ee,stroke-width:2px
 ```
+
+<br>
+
+Detailed architecture diagram → [docs/architecture.md]()
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+
 
 <br><br>
 
