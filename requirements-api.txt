@@ -5,7 +5,7 @@
 # API Production Requirements
 # WHICH FILE TO USE — see full table in:
 #   docs/architecture/REQUIREMENTS_GUIA.md
-#   MANUAL_COMPLETO.md, section 6.0
+#  COMPLETE_ MANUAL.md, section 6.0
 #
 # WHAT THIS FILE IS
 # This is a lightweight dependency file for API-only production
