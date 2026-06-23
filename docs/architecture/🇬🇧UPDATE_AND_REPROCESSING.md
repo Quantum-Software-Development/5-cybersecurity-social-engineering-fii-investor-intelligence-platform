@@ -3,7 +3,7 @@
 
 ## Investor Intelligence Platform — FIIs Brasil 🇧🇷
 
-> This document details two frequent questions about the system’s behavior in production: **(1)** how often the data is updated, and **(2)** whether each update requires reprocessing the entire pipeline from scratch. Both have direct answers that impact how the project should be operated and presented.[^1]
+> This document details two frequent questions about the system’s behavior in production: **(1)** how often the data is updated, and **(2)** whether each update requires reprocessing the entire pipeline from scratch. Both have direct answers that impact how the project should be operated and presented.
 
 <br><br>
 
@@ -35,7 +35,7 @@
 
 ## On-Demand vs. Scheduled — Two Different Concepts
 
-These two concepts are often confused because both involve \"running the pipeline again\" — but they answer different questions: **who decides when** the update happens.[^1]
+These two concepts are often confused because both involve \"running the pipeline again\" — but they answer different questions: **who decides when** the update happens.
 
 
 | Concept | Who decides \"when\" | Mechanism in GitHub Actions | Is it active in this project? |
@@ -43,7 +43,7 @@ These two concepts are often confused because both involve \"running the pipelin
 | **On-demand** | A person, manually, at the moment they choose | `on: workflow_dispatch` | ✅ Yes |
 | **Scheduled / periodic** | A clock, at fixed intervals, with no human intervention | `on: schedule: - cron: \"...\"` | ❌ No (intentionally disabled) |
 
-Both mechanisms **can co-exist in the same workflow** — they are not mutually exclusive. It is perfectly possible to have a manual button *and* an automatic schedule at the same time; the decision in this project was to keep **only** the manual trigger for now and postpone scheduling.[^1]
+Both mechanisms **can co-exist in the same workflow** — they are not mutually exclusive. It is perfectly possible to have a manual button *and* an automatic schedule at the same time; the decision in this project was to keep **only** the manual trigger for now and postpone scheduling.
 
 <br><br>
 
@@ -80,7 +80,7 @@ Both mechanisms **can co-exist in the same workflow** — they are not mutually 
                     Dashboard and API now serve the data from the moment of the click
 ```
 
-**Practical consequence:** if nobody clicks the button for a week, the served data remains that of the last run, with no explicit \"stale data\" warning other than the `generated_at` field exposed in `/summary` and in the dashboard sidebar.[^1]
+**Practical consequence:** if nobody clicks the button for a week, the served data remains that of the last run, with no explicit \"stale data\" warning other than the `generated_at` field exposed in `/summary` and in the dashboard sidebar
 
 <br><br>
 
@@ -99,6 +99,7 @@ on:
     - cron: "0 6 * * *"     # every day at 06:00 UTC (03:00 in Brasília)
 ```
 
+<br>
 
 ### Cron syntax (5 fields)
 
@@ -215,7 +216,7 @@ Beyond the per-layer changes already described, a truly incremental architecture
 | **Periodic refit strategy for TF-IDF/BM25** | Even in an incremental scenario, these two models would need to be **fully retrained** at intervals (e.g. weekly), with new articles being served with approximate/outdated scores between refits |
 | **Schema versioning** | Ensure that adding a new column in a notebook does not break merges with older data from previous runs |
 
-> 📌 This list is deliberately simpler than the *streaming* architecture (Kafka, Spark Structured Streaming, transactional DB) described in `COMPLETE_MANUAL.md` — incremental batch processing is a middle ground between \"always full refresh\" (what exists now) and \"real-time streaming\" (which would be a much larger project). See the [\"See Also\"](#see-also) section below.[^1]
+> 📌 This list is deliberately simpler than the *streaming* architecture (Kafka, Spark Structured Streaming, transactional DB) described in `COMPLETE_MANUAL.md` — incremental batch processing is a middle ground between \"always full refresh\" (what exists now) and \"real-time streaming\" (which would be a much larger project). See the [\"See Also\"](#see-also) section below.
 
 <br><br>
 
@@ -235,7 +236,7 @@ Beyond the per-layer changes already described, a truly incremental architecture
 - **`COMPLETE_MANUAL.md`**, section **\"Part 5 — Automation and Real-Time Updates\"** — explains the difference between batch and streaming, and what would be needed for a true real-time system (Kafka, Spark Structured Streaming, transactional DB, WebSocket).
 - **`docs/methodology/MAPREDUCE_PATTERN.md`** — details the MapReduce implementation used in NB03, relevant to understanding why its current aggregation is not trivially incremental.
 - **`docs/methodology/BM25_FOUNDATION.md`** — details the BM25 mathematical formula and why `avgdl` is a global corpus value, not per-document.
-- **`.github/workflows/atualizar_dados.yml`** — file where the manual trigger is configured and where the `schedule` (cron) can be added.[^1]
+- **`.github/workflows/atualizar_dados.yml`** — file where the manual trigger is configured and where the `schedule` (cron) can be added.
 
 <br><br>
 
