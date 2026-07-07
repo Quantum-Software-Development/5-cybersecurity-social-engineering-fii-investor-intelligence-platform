@@ -1,126 +1,125 @@
-# ⚡ FAISS (Facebook AI Similarity Search)
+# ⚡ FAISS — Semantic Similarity Search Engine
 
-## 📌 Overview
+## 1. 📌 Overview
 
-**FAISS (Facebook AI Similarity Search)** is an open-source library developed by Meta AI for efficient similarity search and clustering of dense vectors (embeddings).
+**FAISS (Facebook AI Similarity Search)** is a high-performance library designed for efficient similarity search over dense vector representations.
 
-It enables fast retrieval across millions or billions of vectors and is a core component in modern AI systems such as:
+Within this project, FAISS acts as the **semantic retrieval engine**, enabling the system to move beyond keyword matching and operate over **meaning-based relationships**.
 
-* Retrieval-Augmented Generation (RAG)
-* Semantic Search
-* Recommendation Systems
-* Financial Intelligence Platforms
+<br><br>
 
-In this project, FAISS acts as the **semantic retrieval engine** powering contextual understanding of Brazilian FIIs.
 
----
+## 2. 🎯 Purpose in the Architecture
 
-## 🧠 Core Concept
+FAISS is responsible for:
 
-Traditional systems rely on **exact keyword matching**.
+* Indexing vector embeddings generated from financial text
+* Performing fast nearest-neighbor search
+* Retrieving semantically similar documents
 
-FAISS operates differently:
+> It enables the system to find **relevant information even when exact terms are not present**.
 
-> It retrieves information based on **semantic similarity (meaning)** rather than exact words.
+<br><br>
 
-This allows the system to detect:
 
-* Implicit signals
-* Contextual relationships
-* Market narratives
+## 3. 🧠 Conceptual Role
 
----
+FAISS operates in a **high-dimensional vector space**, where:
 
-## ⚙️ How FAISS Works
+* Each document → becomes a vector
+* Distance between vectors → represents semantic similarity
 
-```mermaid
-graph TD
-    A[Financial Documents] --> B[Text Chunking]
-    B --> C[Embedding Model]
-    C --> D[Vector Embeddings]
-    D --> E[FAISS Index]
-    E --> F[Similarity Search Top-K]
-    F --> G[Relevant Context]
-    G --> H[RAG / LLM]
-    H --> I[Insights & Sentiment Analysis]
-```
+> The closer two vectors are, the more similar their meanings.
 
----
+<br><br>
 
-### Step-by-step:
+## 4. ⚙️ How It Works
 
-1. Documents are split into chunks
-2. Each chunk is converted into embeddings
-3. Embeddings are indexed in FAISS
-4. A query is transformed into a vector
-5. FAISS retrieves nearest neighbors
-6. Results are used by the LLM
+### Step 1 — Text → Embeddings
 
----
+Financial text is transformed into vectors using models such as:
 
-## 🔍 Semantic Retrieval (Key Insight)
+* SentenceTransformer
+* BERT-based encoders
 
-* **Embeddings** = represent meaning as vectors
-* **FAISS** = finds closest meanings in vector space
+<br><br>
+-
 
-> The system no longer asks *"where is this word?"*
-> It asks *"where is this idea?"*
+### Step 2 — Indexing
 
----
+FAISS stores vectors in optimized data structures:
 
-## 🚀 Why FAISS is Critical in This Project
+* Flat indexes (exact search)
+* IVF (Inverted File Index)
+* HNSW (Hierarchical graphs)
 
-Financial data (FIIs) contains:
+<br><br>
 
-* Noise
-* Indirect language
-* Sentiment-driven narratives
+
+### Step 3 — Similarity Search
+
+Given a query vector, FAISS:
+
+1. Computes distance (e.g., cosine similarity or L2)
+2. Retrieves nearest neighbors
+3. Returns the most relevant documents
+
+<br><br>
+
+
+## 5. 🔍 Types of Similarity
+
+FAISS supports multiple similarity metrics:
+
+| Metric            | Description            |
+| ----------------- | ---------------------- |
+| L2 Distance       | Euclidean distance     |
+| Inner Product     | Dot product similarity |
+| Cosine Similarity | Angular similarity     |
+
+<br><br>
+
+
+## 6. 🚀 Why FAISS is Critical in This Project
 
 Traditional methods (TF-IDF, BM25):
 
-* Capture explicit mentions
-* Fail on implicit meaning
+* Depend on exact word matching
+* Fail with paraphrases or implicit meaning
 
 FAISS enables:
 
+* Semantic understanding
 * Context-aware retrieval
-* Detection of latent sentiment
-* Discovery of hidden relationships
+* Discovery of implicit signals
 
----
+> This is essential for analyzing **investor sentiment and market narratives**.
 
-## 🧩 Integration with Hybrid Retrieval
+<br><br>
 
-FAISS is part of a **multi-layer retrieval system**:
 
-```mermaid
-graph TD
-    A[MapReduce] --> B[TF-IDF]
-    A --> C[BM25]
-    A --> D[Embeddings]
-    D --> E[FAISS]
-    B --> F[Hybrid Retrieval]
-    C --> F
-    E --> F
-    F --> G[RAG]
-```
+## 7. 🔗 Integration with Other Components
 
----
+FAISS does not work in isolation — it complements other techniques:
 
-### Role of Each Component
+| Component  | Role               | Relation to FAISS         |
+| ---------- | ------------------ | ------------------------- |
+| MapReduce  | Data preparation   | Feeds clean text          |
+| TF-IDF     | Term relevance     | Supports lexical baseline |
+| BM25       | Keyword precision  | Handles explicit mentions |
+| Embeddings | Vector generation  | Input for FAISS           |
+| RAG        | Insight generation | Uses FAISS results        |
 
-| Component  | Function                |
-| ---------- | ----------------------- |
-| MapReduce  | Data structuring        |
-| TF-IDF     | Term importance         |
-| BM25       | Keyword precision       |
-| Embeddings | Semantic representation |
-| FAISS      | Similarity search       |
-| RAG        | Insight generation      |
+<br><br>
 
----
 
-## 🧠 Application to FIIs
+## 8. 🧠 Application to FIIs
+
+In the context of Brazilian FIIs, FAISS enables:
+
+* Detection of **indirect discussions** about funds
+* Identification of **market sentiment trends**
+* Retrieval of **contextually similar financial narratives**
 
 Example:
 
@@ -132,92 +131,72 @@ Query:
 
 FAISS can retrieve:
 
-* Discussions about *HGLG11* (even without explicit mention)
-* News about warehouse vacancy
-* Market sentiment on logistics sector
+* Discussions about HGLG11 without mentioning it explicitly
+* News about warehouse vacancy rates
+* Sentiment shifts in logistics FIIs
 
----
+<br><br>
 
-### What This Enables
 
-* Detection of **implicit market signals**
-* Aggregation of **distributed sentiment**
-* Understanding of **investor behavior**
+## 9. 🔁 FAISS within RAG
 
----
+FAISS is a core component of the **Retrieval-Augmented Generation (RAG)** pipeline:
 
-## 🔁 FAISS in RAG Pipeline
-
-```mermaid
-graph LR
-    Q[User Query] --> E[Embedding]
-    E --> F[FAISS Search]
-    F --> C[Context Retrieval]
-    C --> L[LLM]
-    L --> R[Final Response]
+```text
+User Query → Embedding → FAISS Search → Retrieved Context → LLM → Answer
 ```
 
----
+<br><br>
 
-## ⚡ Key Features
 
-| Feature       | Description                    |
-| ------------- | ------------------------------ |
-| Vector Search | Similarity-based retrieval     |
-| ANN           | Approximate Nearest Neighbor   |
-| GPU Support   | High-performance scaling       |
-| CPU Support   | Efficient fallback             |
-| Scalability   | Millions → billions of vectors |
+## 10. 🧩 Strengths
 
----
+* High scalability (millions of vectors)
+* Extremely fast search
+* Works with high-dimensional data
+* Enables semantic retrieval
+<br><br>
 
-## ✅ Advantages
 
-* Extremely fast
-* Scalable
-* Context-aware
-* Enables semantic intelligence
-* Essential for RAG systems
+## 11. ⚠️ Limitations
 
----
+* Requires high-quality embeddings
+* Approximate search may reduce precision
+* No inherent interpretability (black-box vectors)
 
-## ⚠️ Limitations
+<br><br>
 
-* Depends on embedding quality
-* Approximate search trade-offs
-* Low interpretability
 
----
+## 12. 🔮 Conceptual Insight
 
-## 🔮 Conceptual Insight
+FAISS transforms information retrieval from:
 
-FAISS transforms:
+* Keyword matching → **Meaning navigation**
+* Static search → **Semantic exploration**
 
-* Search → **Semantic Navigation**
-* Data → **Meaning Space**
+> It allows the system to operate in a **space of meanings rather than words**.
 
-> It enables systems to operate in a **cognitive-like retrieval paradigm**.
+<br><br>
 
----
 
-## 🔗 Connection to Conceptual Foundations
+## 13. 🔗 Relation to Conceptual Foundations
 
 For deeper theoretical context:
 
 📄 `docs/Conceptual Foundations.md`
 
----
+<br><br>
+
 
 ## 🧠 Final Insight
 
-FAISS is not just a tool — it is the **core enabler of semantic intelligence**.
+FAISS is not just a search tool — it is the **core enabler of semantic intelligence** in the system.
 
 When combined with:
 
+* Embeddings → representation
 * BM25 → precision
-* TF-IDF → statistical grounding
 * RAG → reasoning
 
-> FAISS becomes the bridge between **language, meaning, and financial insight**.
+> FAISS becomes the **bridge between language and meaning** in financial intelligence systems.
 
----
