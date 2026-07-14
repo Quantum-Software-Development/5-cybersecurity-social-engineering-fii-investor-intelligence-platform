@@ -57,8 +57,9 @@ pyspark==3.5.2
 # mentioned as a learning concept). Remove this block if a
 # lighter installation is desired.
 # ==========================================================
+
 minio==7.2.20
-boto3>=1.34.131,<1.35
+boto3>=1.43.46,<1.44
 s3fs>=2024.6.1,<2025.0
 
 # ==========================================================
@@ -119,10 +120,10 @@ faiss-cpu>=1.8.0
 # ==========================================================
 plotly==5.22.0
 matplotlib==3.11.0
-altair<5
+altair<7
 
 # ⚠️ Fixed: the previous version had both
-# "altair==4.2.2" and "altair<5", causing pip install to
+# "altair==4.2.2" and "altair<7", causing pip install to
 # fail due to duplicate requirements.
 
 # ==========================================================

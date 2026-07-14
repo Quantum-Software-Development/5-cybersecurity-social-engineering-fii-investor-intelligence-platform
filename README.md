@@ -196,19 +196,21 @@ $$\Huge {\textbf{\color{green} CRISP-DM} \space \textbf{\color{white} •} \spac
 23. [Technical Glossary](#-technical-glossary)
 24. [Repository and Project Links](#-repository-and-project-links)
 25. [References](#-references)
+26. [Authors](#-authors)
+
 
 
 <br><br>
 
 ## [🎓 Academic and Institutional Context]()
 
-<br>
 
-This project was developed at PUC-SP in the courses of cybersecurity, social engineering, data engineering and Big Data analytics applied to financial markets. The original requirement focused on demonstrating a distributed word count solution using PySpark and the MapReduce paradigm.
+This project was developed at **PUC-SP** as part of the courses **Cybersecurity**, **Social Engineering**, **Data Engineering**, **Distributed Systems**, and **Big Data Analytics Applied to Financial Markets**. The original assignment focused on demonstrating a distributed **Word Count** solution using **PySpark** and the **MapReduce** paradigm.
 
-From this starting point, the repository was extended to incorporate more advanced analytical techniques (TF-IDF, BM25, contextual sentiment), a serving architecture with FastAPI + RAG and a structured pipeline oriented towards FII marketing intelligence.
+Building upon this foundation, the project evolved into a comprehensive financial intelligence platform by incorporating advanced information retrieval and natural language processing techniques, including **TF-IDF**, **BM25**, and **contextual sentiment analysis**. It also integrates a modern serving architecture based on **FastAPI** and **Retrieval-Augmented Generation (RAG)**, supported by a structured data engineering pipeline designed for **FII (Real Estate Investment Funds) market intelligence** and decision support.
 
 <br><br>
+
 
 ## [Academic Requirements Met]()
 
@@ -232,18 +234,43 @@ From this starting point, the repository was extended to incorporate more advanc
 
 ## [Product Overview and Definition]()
 
+The [**Investor Intelligence Platform 🇧🇷 FIIs Brazil**]() is an AI-powered market intelligence platform designed to transform fragmented public discussions about Brazilian **Real Estate Investment Funds (FIIs)** into structured, searchable, explainable, and actionable insights.
+
+Originally conceived as an academic **Big Data** project at **PUC-SP**, the platform has evolved into a complete end-to-end intelligence ecosystem that combines distributed data engineering, information retrieval, natural language processing, and generative AI to support investor analysis and marketing intelligence.
+
+Rather than serving as a traditional dashboard, the platform continuously collects, processes, enriches, and exposes financial information through a scalable analytics pipeline.
+
+### [Core Capabilities]()
+
+[***The platform:***]()
+
+[*]() collects data from [**21 public sources**]() (RSS feeds, financial portals, web scraping, and Reddit); <br>
+[*]() organizes the information using a **Bronze → Silver → Gold Medallion Architecture** v<br>
+[*]() enriches documents through hybrid information retrieval combining **TF-IDF**, **BM25**, and **FAISS semantic search** with multilingual Portuguese embeddings; <br>
+[*]() performs contextual **Portuguese (PT-BR) sentiment analysis** specialized for the Brazilian FII market; <br>
+[*]() generates explainable marketing intelligence indicators for investor behavior analysis; <br>
+[*]() exposes all processed information through **FastAPI**, **RAG**, **Groq LLM**, and an interactive **Streamlit** dashboard.
+
 <br>
 
-The [**Investor Intelligence Platform 🇧🇷 FIIs Brazil**]() is not just an academic Big Data exercise. It is an investor intelligence platform for Brazilian Real Estate Investment Funds (FIIs), designed to transform fragmented public financial discussions into structured, searchable, explainable and decision-oriented market intelligence.
+[***The platform is capable of:***]()
 
-Instead of being a simple dashboard, the system operates as an end-to-end analytical environment that:
+[*]() Monitoring investor sentiment across digital financial communities; <br>
+[*]() Identifying emerging themes and market trends; <br>
+[*]() Ranking document relevance using hybrid retrieval (**TF-IDF + BM25 + semantic search**); <br>
+[*]() Detecting behavioral patterns in investor discussions; <br>
+[*]() Supporting marketing, communication, and investment research strategies; <br>
+[*]() Mapping investor engagement across the Brazilian financial information ecosystem; <br>
+[*]() Providing AI-assisted question answering through a Retrieval-Augmented Generation (RAG) architecture.
 
-[-]() collects data from 21 sources (RSS · scraping · Reddit)<br>
-[-]()organizes them in a Bronze/Silver/Gold architecture <br>
-[-]() enriches them with hybrid retrieval (TF-IDF + BM25 + FAISS semantic search with multilingual PT-BR embeddings), FII PT-BR sentiment and explainable marketing intelligence signals   <br>
-[-]() exposes results via [**FastAPI + RAG + Groq chatbot + Streamlit**]()
+<br><br>
 
-<br>
+> [!TIP]
+>
+> More than a Big Data demonstration, [**Investor Intelligence Platform — FIIs Brazil**]() showcases how modern data engineering, NLP, semantic retrieval, and Large Language Models can be integrated into a scalable decision-support system for financial market intelligence.
+
+
+<br><br>
 
 ```mermaid
 %%{init:{
@@ -281,6 +308,9 @@ classDef gold fill:#2a2208,stroke:#e6c35a,color:#F5F7FA,stroke-width:2.5px;
 classDef dash fill:#06363d,stroke:#2dd4bf,color:#F5F7FA,stroke-width:2.5px;
 classDef llm fill:#231433,stroke:#b56cff,color:#F5F7FA,stroke-width:2.5px;
 ```
+
+
+
 
 <br><br>
 
