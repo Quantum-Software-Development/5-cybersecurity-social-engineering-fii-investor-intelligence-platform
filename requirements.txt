@@ -57,7 +57,8 @@ pyspark==3.5.2
 # mentioned as a learning concept). Remove this block if a
 # lighter installation is desired.
 # ==========================================================
-minio==7.2.7
+
+minio==7.2.20
 boto3>=1.43.46,<1.44
 s3fs>=2024.6.1,<2025.0
 
