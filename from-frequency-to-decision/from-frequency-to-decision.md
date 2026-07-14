@@ -391,7 +391,7 @@ Traditional sentiment analysis often classifies text as positive, negative, or n
 
 While useful for many applications, this approach is insufficient for financial markets, where identical words can communicate opportunity, caution, or risk depending on their context.
 
-For this reason, the platform performs **context-aware sentiment analysis**, evaluating not only emotional polarity but also the semantic meaning surrounding financial events.
+For this reason, the platform performs [**context-aware sentiment analysis**](), evaluating not only emotional polarity but also the semantic meaning surrounding financial events.
 
 <br>
 
