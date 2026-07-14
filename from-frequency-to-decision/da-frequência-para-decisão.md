@@ -232,3 +232,198 @@ A próxima camada analítica supera essa limitação por meio de representaçõe
 <br><br>
 
 # 4. [FAISS + Embeddings — Compreendendo o Significado Além das Palavras]()
+
+Tradicionalmente, os métodos de busca dependem principalmente de correspondências lexicais exatas.
+
+Consequentemente, documentos que discutem o mesmo conceito utilizando terminologias diferentes podem não ser recuperados, mesmo expressando ideias praticamente idênticas.
+
+<br>
+
+### [***Por exemplo:***]()
+
+<br>
+
+```text
+yield ≠ dividendos ≠ distribuições
+```
+
+<br>
+
+Sob uma perspectiva lexical, essas expressões são diferentes.
+
+Sob uma perspectiva semântica, porém, estão intimamente relacionadas.
+
+Os modelos de *embeddings* transformam palavras, frases e documentos em vetores numéricos de alta dimensão que preservam a similaridade semântica, em vez da correspondência textual exata.
+
+O FAISS (*Facebook AI Similarity Search*) permite a indexação e a recuperação eficientes dessas representações vetoriais, tornando a busca semântica viável mesmo em coleções de documentos muito grandes.
+
+Em vez de corresponder palavras, a plataforma recupera documentos de acordo com a proximidade conceitual.
+
+<br>
+
+### [***Exemplo:***]()
+
+<br>
+
+```text
+rendimento mensal
+        ≈
+dividendos recorrentes
+        ≈
+distribuições de renda
+```
+
+<br>
+
+Embora a redação mude, o conceito financeiro subjacente permanece essencialmente o mesmo.
+
+<br>
+
+### [***Insight:***]()
+
+<br>
+
+A recuperação semântica permite que a plataforma descubra informações que permaneceriam invisíveis para buscas tradicionais baseadas em palavras-chave.
+
+Em vez de perguntar se dois documentos contêm termos idênticos, o FAISS avalia se eles comunicam ideias semelhantes.
+
+Isso aumenta significativamente o *recall* (capacidade de recuperar informações relevantes), preservando ao mesmo tempo a relevância contextual, permitindo que investidores acessem informações conceitualmente relacionadas independentemente do vocabulário utilizado.
+
+Ainda assim, recuperar documentos semanticamente relevantes não é o objetivo final.
+
+Os usuários precisam, em última análise, de respostas sintetizadas, e não apenas de listas de documentos.
+
+A próxima etapa, portanto, combina recuperação semântica com Grandes Modelos de Linguagem (LLMs) para gerar respostas fundamentadas em evidências verificáveis.
+
+<br>
+
+### [Transição — Da Recuperação de Informação à Geração de Conhecimento]()
+
+Neste ponto, a plataforma evoluiu progressivamente por meio de quatro etapas analíticas complementares.
+
+Cada camada contribui com uma capacidade distinta:
+
+<br>
+
+* [**MapReduce**]() identifica a atenção coletiva em grandes volumes de dados.
+* [**TF-IDF**]() mede a especificidade informacional.
+* [**BM25**]() classifica documentos de acordo com sua relevância contextual.
+* [**FAISS + Embeddings**]() recupera informações com base na similaridade semântica.
+
+<br>
+
+Em conjunto, essas técnicas melhoram significativamente a qualidade da recuperação de informações.
+
+No entanto, os usuários ainda recebem documentos, e não respostas diretas.
+
+A próxima camada analítica fecha essa lacuna ao integrar recuperação de informação com inteligência artificial generativa, permitindo que a plataforma transforme evidências recuperadas em respostas coerentes, explicáveis e fundamentadas por meio da **Geração Aumentada por Recuperação (RAG)**.
+
+<br><br>
+
+## 5. [Retrieval-Augmented Generation (RAG) — Da Recuperação de Informação à Inteligência]()
+
+Depois que a plataforma é capaz de recuperar os documentos mais relevantes — tanto lexical quanto semanticamente —, o próximo desafio é transformar essas informações em respostas claras, confiáveis e explicáveis.
+
+O **Retrieval-Augmented Generation (RAG)** preenche essa lacuna ao combinar técnicas de recuperação de informação com a capacidade de raciocínio dos Grandes Modelos de Linguagem (LLMs).
+
+Em vez de gerar respostas exclusivamente a partir do conhecimento interno do modelo, o RAG primeiro recupera as evidências mais relevantes do corpus indexado e incorpora esse contexto ao processo de geração.
+
+<br>
+
+> Essa abordagem reduz significativamente as alucinações, ao mesmo tempo em que melhora a precisão factual, a transparência e a explicabilidade.
+
+<br>
+
+### [Evidências recuperadas:]()
+
+<br>
+
+[*]() "O XPTO11 distribuiu R$ 0,85 por cota no último ciclo de dividendos..." <br>
+[*]() "Os investidores continuam priorizando fundos com renda recorrente estável..." <br>
+[*]() "Os FIIs de logística mantiveram taxas de vacância inferiores à média do mercado..."
+
+<br>
+
+### [Resposta gerada:]()
+
+<br>
+
+> "Os FIIs analisados demonstram um foco consistente na geração de renda recorrente, com investidores demonstrando preferência por fundos que mantêm distribuições estáveis de dividendos e níveis resilientes de ocupação."
+
+<br>
+
+### [***Insight:***]()
+
+<br>
+
+A resposta gerada não se baseia apenas no conhecimento prévio do modelo de linguagem.
+
+Em vez disso, ela é fundamentada em evidências recuperadas diretamente da base de conhecimento da plataforma, garantindo que as conclusões permaneçam rastreáveis até documentos reais.
+
+Isso transforma a recuperação de informação em geração de conhecimento explicável, em vez de simples geração de texto.
+
+No entanto, a correção factual, por si só, não é suficiente para produzir inteligência de mercado.
+
+A linguagem financeira é inerentemente contextual, e fatos idênticos podem carregar implicações muito diferentes dependendo da forma como são expressos.
+
+Por isso, a próxima camada analítica concentra-se na interpretação do contexto, e não apenas na recuperação de informações.
+
+<br><br>
+
+## 6. [Análise de Sentimento Contextual — Compreendendo o Significado Além da Polaridade]()
+
+A análise tradicional de sentimento costuma classificar textos como positivos, negativos ou neutros.
+
+Embora útil para diversas aplicações, essa abordagem é insuficiente para os mercados financeiros, onde palavras idênticas podem comunicar oportunidade, cautela ou risco, dependendo do contexto.
+
+Por esse motivo, a plataforma realiza [**análise de sentimento sensível ao contexto**](), avaliando não apenas a polaridade emocional, mas também o significado semântico que envolve os eventos financeiros.
+
+<br>
+
+### [Cenário positivo:]()
+
+<br>
+
+> "O fundo aumentou a distribuição de dividendos após um crescimento operacional sustentado."
+
+<br>
+
+🟢 Positivo
+
+<br>
+
+### [Cenário de risco:]()
+
+<br>
+
+> "O fundo manteve dividendos excepcionalmente elevados apesar da queda nas taxas de ocupação."
+
+<br>
+
+🟡 / 🔴 Alerta
+
+<br>
+
+Embora ambas as afirmações mencionem distribuições de dividendos, elas comunicam condições de mercado completamente diferentes.
+
+A primeira reflete força operacional.
+
+A segunda pode indicar uma política de distribuição insustentável e, portanto, merece atenção adicional.
+
+<br>
+
+### [***Insight:***]()
+
+<br>
+
+O contexto determina a interpretação.
+
+Ao combinar compreensão semântica com análise de sentimento contextual, a plataforma distingue sinais saudáveis do mercado de potenciais alertas, permitindo que investidores interpretem narrativas financeiras com maior precisão.
+
+Em vez de avaliar palavras isoladas, o sistema analisa as relações entre eventos, indicadores financeiros e contexto narrativo para identificar oportunidades, incertezas e riscos emergentes.
+
+Essa camada analítica final completa a transição da recuperação de informações para a inteligência aplicada à tomada de decisão.
+
+<br><br>
+
+## 7. [Framework Analítico — Dos Dados à Decisão]()
