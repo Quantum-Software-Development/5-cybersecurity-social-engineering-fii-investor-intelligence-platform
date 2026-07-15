@@ -7,8 +7,7 @@
 
 <!-- ========= START REPO TITLE ========= -->
 # <p align="center"> [Investor Intelligence Platform  -  Brazilian FIIs]() 🇧🇷
-### <p align="center"> Fundos de Investimento Imobiliário (FIIs) - Inteligência de Mercado e Análise Comportamental
-
+### <p align="center"> Plataforma de Inteligência de Mercado, Análise Comportamental e Análise de Sentimento para Fundos de Investimento Imobiliário (FIIs)
 <br><br>
 
 $$\Huge {\textbf{\color{green} CRISP-DM} \space \textbf{\color{white} •} \space \textbf{\color{yellow}  Data Lakehouse} \space \textbf{\color{white} •} \space \textbf{\color{green} NLP} \space \textbf{\color{white} •} \space \textbf{\color{yellow} Responsible AI} \space \textbf{\color{white} •} \space \textbf{\color{green} Regulatory Alignment}}$$
