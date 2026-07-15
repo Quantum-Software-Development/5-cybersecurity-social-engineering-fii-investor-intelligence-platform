@@ -142,9 +142,9 @@ $$\Huge {\textbf{\color{green} CRISP-DM} \space \textbf{\color{white} •} \spac
 >
 > $$\Huge {\textbf{\color{green} Where market discussions become investment narratives…}}$$
 >
-> $$\Huge {\textbf{\color{yellow} because markets talk a lot...}}$$
+> $$\Huge {\textbf{\color{yellow} Because markets talk a lot...}}$$
 > 
-> $$\Huge {\textbf{\color{green} intelligent systems just listen better}}$$
+> $$\Huge {\textbf{\color{green} Intelligent systems just listen better}}$$
 >
 > ### <p align="center"> ⚡
 
