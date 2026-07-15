@@ -8,8 +8,8 @@
 
 
 <!-- ========= START REPO TITLE ========= -->
-# <p align="center"> [Investor Intelligence Platform  - Brazilian FIIs]() 🇧🇷  
-### <p align="center"> Real Estate Investment Funds (FIIs) - Market Intelligence & Behavioral Analytics
+# <p align="center">[Investor Intelligence Platform for Brazilian FIIs]() 🇧🇷</p>
+### <p align="center">AI-Powered Market Intelligence, Behavioral Analytics & Sentiment Analysis for Brazilian Real Estate Investment Funds (FIIs)</p>
 
 <br><br>
 
