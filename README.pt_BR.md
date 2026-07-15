@@ -12,7 +12,7 @@
 <br>
 
 <p align="center"> 
-Infraestrutura de IA de ponta a ponta que transforma dados financeiros não estruturados em inteligência acionável para Fundos de Investimento Imobiliário (FIIs) no Brasil.
+Infraestrutura end-to-end de IA que transforma dados financeiros não estruturados em inteligência acionável para FIIs no Brasil.
 </p>
 
 <br>
