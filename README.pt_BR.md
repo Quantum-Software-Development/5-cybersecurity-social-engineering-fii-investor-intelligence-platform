@@ -1,4 +1,3 @@
-
 <!-- ========= START LANGUAGE BUTTON ========= -->
 **[[🇧🇷 Português](README.pt_BR.md)] [**[🇬🇧 English](README.md)**]**
 
@@ -6,20 +5,28 @@
 <!-- ========= END LANGUAGE BUTTON ========= -->
 
 <!-- ========= START REPO TITLE ========= -->
-# <p align="center"> [Investor Intelligence Platform  -  Brazilian FIIs]() 🇧🇷
-### <p align="center"> Plataforma de Inteligência de Mercado, Análise Comportamental e Análise de Sentimento para Fundos de Investimento Imobiliário (FIIs)
-<br><br>
-
-$$\Huge {\textbf{\color{green} CRISP-DM} \space \textbf{\color{white} •} \space \textbf{\color{yellow}  Data Lakehouse} \space \textbf{\color{white} •} \space \textbf{\color{green} NLP} \space \textbf{\color{white} •} \space \textbf{\color{yellow} Responsible AI} \space \textbf{\color{white} •} \space \textbf{\color{green} Regulatory Alignment}}$$
-
-<br>
-
-#### <p align="center"> ***Uma plataforma de inteligência de nível institucional projetada para monitorar, estruturar, ranquear e interpretar sinais relacionados aos Fundos de Investimento Imobiliário (FIIs) brasileiros em mídias financeiras, portais de pesquisa e comunidades de investidores.***
+# <p align="center"> 🇧🇷 Plataforma de Inteligência para Investidores em Fundos Imobiliarios no Brasil (FIIs)</p>
+### <p align="center"> [Inteligência de Mercado com IA, Análise Comportamental & Análise de Sentimento]() </p>
 
 
 <br>
 
-##### <p align="center"> [Big Data]() • [PySpark]() • [MapReduce Word Count]() • [NLP]() • [TF-IDF]() • [BM25 Ranking]() • [Web Scraping]() • [TOFU Strategy]() • [CRISP-DM]() • [FastAPI]() • [Streamlit]() • [Docker]() • [AI Governance]() • [LGPD Compliance]() • [Brazilian General Data Protection Law No. 13.709/2018]() • [EU AI Act Alignment]()
+<p align="center"> 
+Infraestrutura de IA de ponta a ponta que transforma dados financeiros não estruturados em inteligência acionável para Fundos de Investimento Imobiliário (FIIs) no Brasil.
+</p>
+
+<br>
+
+$$\Huge {\textbf{\color{green} CRISP-DM} \space \textbf{\color{white} •} \space \textbf{\color{yellow} Data Lakehouse} \space \textbf{\color{white} •} \space \textbf{\color{green} NLP} \space \textbf{\color{white} •} \space \textbf{\color{yellow} Responsible AI} \space \textbf{\color{white} •} \space \textbf{\color{green} Regulatory Alignment}}$$
+
+<br>
+
+##### <p align="center">Uma solução de nível institucional projetado para monitorar, estruturar, classificar e interpretar sinais de Fundos de Investimento Imobiliário (FIIs) no Brasil, a partir de mídias financeiras, portais de research e comunidades de investidores.</p>
+
+
+<br>
+
+###### <p align="center">Big Data [•]() PySpark [•]() MapReduce [•]() NLP[•]() TF-IDF [•]() BM25 [•]() Hybrid Retrieval [•]() FAISS + Multilingual Embeddings [•]() Web Scraping [•]() TOFU/MOFU/BOFU [•]() CRISP-DM [•]() FastAPI [•]() Streamlit [•]() Responsible AI [•]() LGPD [•]() EU AI Act Alignment</p>
 
 <br><br>
 <!-- ========= END REPO TITLE ========= -->
