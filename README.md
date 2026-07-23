@@ -203,8 +203,8 @@ $$\Huge {\textbf{\color{green} CRISP-DM} \space \textbf{\color{white} •} \spac
 
 <br><br>
 
-$\Huge {\textbf{\color{green} 🎓 Academic and Institutional Context}}$
-#
+
+# 1. [Academic Context()
 
 <br>
 
