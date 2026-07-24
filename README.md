@@ -279,6 +279,10 @@ By ingesting data from **21 public sources** (RSS feeds, financial portals, web 
 
 <br><br>
 
+## [System Overview]()
+
+<br>
+
 ```mermaid
 %%{init:{
 'theme':'dark',
@@ -319,105 +323,67 @@ classDef llm fill:#231433,stroke:#b56cff,color:#F5F7FA,stroke-width:2.5px;
 
 <br><br>
 
-$\Huge {\textbf{\color{green} 🎯 Objectives}}$
-#
+## 3. [From Frequency to Decision]()
+
+
+> Frequency → Relevance → Meaning → Decision
+
+An NLP + Information Retrieval pipeline that transforms unstructured information from the FII market into actionable intelligence — combining **MapReduce, TF-IDF, BM25, FAISS + Embeddings, RAG, and Contextual Sentiment Analysis** into progressive intelligence layers, each solving a specific structural limitation of the one before it.
+
 
 <br>
 
-1. [**Complete end-to-end pipeline**]() — from ingestion to analytical output. <br>
-2. [**Distributed processing + NLP**]() — PySpark MapReduce combined with TF-IDF, BM25 and contextual sentiment. <br>
-3. [**RAG over FII corpus**]() — hybrid retrieval via TF-IDF, BM25 and FAISS-backed multilingual PT-BR embeddings, followed by contextual generation via Groq. <br>
-4. [**Cybersecurity and Social Engineering**]() — security perspective in interpreting channels and narratives.
+## [From Frequency to Decision]()
+
+
+> Frequency → Relevance → Meaning → Decision
+
+<br>
+
+An NLP + Information Retrieval pipeline that transforms unstructured information from the FII market into actionable intelligence — combining **MapReduce, TF-IDF, BM25, FAISS + Embeddings, RAG, and Contextual Sentiment Analysis** into progressive intelligence layers, each solving a specific structural limitation of the one before it.
+
+<br>
+
+| Layer | Question It Answers |
+|---|---|
+| MapReduce | Is this topic frequently discussed? |
+| TF-IDF | Does this term distinguish this document? |
+| BM25 | Which document best satisfies the user's query? |
+| FAISS + Embeddings | Can different words represent the same concept? |
+| RAG | How can retrieved evidence become a reliable answer? |
+| Contextual Sentiment | Does the surrounding context indicate opportunity or risk? |
+
+<br>
+
+>  Full framework, with FII-domain examples and the analytical evolution diagram: [`FROM_FREQUENCY_TO_MEANING.md`](docs/🇬🇧English/methodology/FROM_FREQUENCY_TO_MEANING.md)
 
 <br><br>
 
-$\Huge {\textbf{\color{green} 👥 Target Audience}}$
-#
 
-<br>
 
-[-]() Asset and fund managers who monitor investor perception <br>
-[-]() Financial analysts who track market narratives <br>
-[-]() Marketing teams interested in FII visibility and engagement <br>
-[-]() Academic evaluators assessing Big Data, Spark, NLP and RAG <br>
-[-]() Recruiters and technical portfolio reviewers
 
-<br><br>
 
-$\Huge {\textbf{\color{green}  Why This Matters ❓}}$
-#
 
-<br>
 
-Analysts, managers and financial communication teams face:
 
-[-]() information dispersed across dozens of portals and communities <br>
-[-]() high noise-to-signal ratio in market discussions <br>
-[-]() difficulty tracking how sentiment and narratives evolvev <br>
-[-]()  lack of transparent tools aligned with LGPD and the EU AI Act
 
-<br>
 
-> [!TIP]
-> This platform addresses this gap with 21 monitored sources, a Bronze/Silver/Gold pipeline and reproducible, interpretable analytics.
 
-<br><br>
 
-$\Huge {\textbf{\color{green}  Source Coverage}}$
-#
 
-<br>
 
-The platform monitors a curated set of editorial and behavioral sources relevant to the Brazilian FII ecosystem. Instead of treating all inputs as an undifferentiated corpus, the project distinguishes:
 
-<br>
 
-[-]() [**Editorial RSS sources**]() — collected via structured feeds ><br>
-[-]() [**Editorial portals via scraping**]() — controlled extraction of public metadata ><br>
-[-]() [**Behavioral social sources**]() — Reddit as a community sentiment layer
 
-<br>
 
-> [!TIP]
-> Detailed documentation per source: [`docs/data_sources.md`](https://github.com/Quantum-Software-Development/5-cybersecurity-social-engineering-fii-marketing-intelligence-platform/blob/2b697bb54a78f4d31424ecd334466f9fc4a8d6e0/docs/data_sources.md)
-
-<br><br>
-
-$\Huge {\textbf{\color{green}  Collection Strategy by Source Type}}$
-#
-
-<br>
-
-$\large {\textbf{\color{yellow} RSS-First}}$
-
-When available, [**RSS**]() is preferred: lower extraction cost, native structured metadata, no risk of breakage due to HTML layout changes, reliable scheduling.
-
-<br>
-
-$\large {\textbf{\color{yellow} Scraping as Controlled Fallback}}$
-
-When RSS is unavailable or unstable, controlled HTML extraction of public pages. It does not simulate human navigation — it collects observable metadata (titles, links, timestamps, categories, excerpts).
-
-<br>
-
-$\large {\textbf{\color{yellow} Collection of Social Sources}}$
-
-Reddit follows a separate logical path because it represents conversational and community-based data.
-It is treated as a behavioral and discursive input layer that complements editorial coverage with public sentiment and emerging narratives.
-
-<br>
-
-$\large {\textbf{\color{yellow} 3-level strategy:}}$
-
-| [Level]() | [Method]() | [Requires]() |
-|---|---|---|
-| [1]() | PRAW (Python Reddit API Wrapper) | `REDDIT_CLIENT_ID` + `REDDIT_CLIENT_SECRET` |
-| [2]() | Public API `/new.json` + `/hot.json` | None |
-| [3]() | Committed frozen Parquet | None |
 
 
 <br><br>
-
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
 
 ###  [ Official Data Sources — 21 Monitored Sources]()
 
