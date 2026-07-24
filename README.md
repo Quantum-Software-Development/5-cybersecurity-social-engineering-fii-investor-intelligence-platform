@@ -5,7 +5,7 @@
 <!-- ========= END LANGUAGE BUTTON ========= -->
 
 <!-- ========= START REPO TITLE ========= -->
-# <p align="center"> 🇧🇷 Investor Intelligence Platform for Brazilian REITs (FIIs) </p>
+# <p align="center"> 🇧🇷 [Investor Intelligence Platform for Brazilian REITs (FIIs)]() </p>
 ### <p align="center"> AI-Powered Market Intelligence · Behavioral Analytics · Sentiment Analysis </p>
 
 <br>
@@ -172,7 +172,7 @@ $$\Huge {\textbf{\color{green} CRISP-DM} \space \textbf{\color{white} •} \spac
 ## Table of Contents
 
 1. [Academic Context](#1-academic-context)
-2. [Overview](#2-overview)
+2. [Product Overview](#2-product-overview)
 3. [System Overview](#3-system-overview)
 4. [From Frequency to Decision](#4-from-frequency-to-decision)
 5. [What This Platform Delivers](#5-what-this-platform-delivers)
@@ -211,9 +211,9 @@ This project was developed at **PUC-SP** as part of the courses **Cybersecurity*
 
 Building upon this foundation, the project evolved into a comprehensive financial intelligence platform by incorporating advanced information retrieval and natural language processing techniques, including **TF-IDF**, **BM25**, and **contextual sentiment analysis**. It also integrates a modern serving architecture based on **FastAPI** and **Retrieval-Augmented Generation (RAG)**, supported by a structured data engineering pipeline designed for **FII (Real Estate Investment Funds) market intelligence** and decision support.
 
-<br><br>
+<br>
 
-## 2. [Academic Requirements Met]()
+###  1.1 [*Academic Requirements Met*]()
 
 <br>
 
@@ -233,12 +233,11 @@ Building upon this foundation, the project evolved into a comprehensive financia
 
 <br><br>
 
-$\Huge {\textbf{\color{green} Product Overview and Definitiond Institutional Context}}$
-#
+## 2 [Product Overview]()
 
 <br>
 
-The  $\large {\textbf{\color{yellow} Investor Intelligence Platform FIIs Brazil}}$  is an AI-powered market intelligence platform designed to transform fragmented public discussions about Brazilian **Real Estate Investment Funds (FIIs)** into structured, searchable, explainable, and actionable insights.
+The  $\large {\textbf{\color{green}  Investor Intelligence Platform for Brazilian REITs (FIIs)}}$  is an AI-powered market intelligence platform designed to transform fragmented public discussions about Brazilian **Real Estate Investment Funds (FIIs)** into structured, searchable, explainable, and actionable insights.
 
 Originally conceived as an academic **Big Data** project at **PUC-SP**, the platform has evolved into a complete end-to-end intelligence ecosystem that combines distributed data engineering, information retrieval, natural language processing, and generative AI to support investor analysis and marketing intelligence.
 
